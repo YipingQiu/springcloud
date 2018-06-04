@@ -1,0 +1,25 @@
+package cn.qiuyiping;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+/**
+ * Hello world!
+ *
+ */
+@SpringBootApplication
+@EnableEurekaServer
+//@RestController
+public class App {
+//    @RequestMapping("/")
+    String home() {
+        return "Hello World!";
+    }
+
+    public static void main(String[] args) throws Exception {
+        SpringApplication.run(App.class, args);
+    }
+}
